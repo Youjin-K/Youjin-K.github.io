@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  justify-content: space-around; /* 아이템들 사이의 간격을 균등하게 배치 */
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+.racket {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 이미지와 텍스트를 수평 중앙 정렬 */
+}
+
+.top-bar {
+  position: fixed; /* 화면 상단에 고정 */
+  top: 0; /* 상단에 위치 */
+  left: 0; /* 왼쪽에 위치 */
+  width: 100%; /* 전체 너비 */
+  height: 60px; /* 상자의 높이 */
+  background-color: #bde2be; /* 상자의 배경 색상 (원하는 색상으로 변경 가능) */
+  z-index: 1000; /* 다른 요소들 위에 표시되도록 설정 */
+}
+
+body {
+  margin-top: 60px; /* 상자 높이만큼 본문 내용 아래로 이동 */
+}
+
+.content {
+  padding: 20px;
+  margin-left: 260px; /* 사이드바 너비만큼 여백 */
+  margin-top: 70px; /* 상단 바 높이 고려 */
+}
+
+.top-bar {
+  background-color: #bcefbe;
+  height: 50px;
+  width: 100%;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* 강조된 링크 색상 (About) */
+.sidebar ul li a.active {
+  color: #bcefbe; /* 강조 색상 (상단 바와 동일한 색상) */
+}
